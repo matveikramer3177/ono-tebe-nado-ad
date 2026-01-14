@@ -2,100 +2,49 @@ main {
     background: #fff;
 }
 
-.container {
-    width: 1100px;
-    margin: 0 auto;
-    position: relative;
-    height: 100%;
-}
-
 /* ===== HEADER ===== */
 .header {
-    height: 293px;
     background: #FFFFFF;
-    position: relative;
-    width: 1100px; /* Ограничиваем ширину */
-    margin: 0 auto; /* Центрируем */
+    display: grid;
+    grid-template-columns: 1fr min-content 1fr;
+    align-items: center;
+    padding: 92px 50px;
+    font-size: 18px;
 }
 
 .logo {
-    position: absolute;
-    left: 478px;
-    top: 92px;
+    justify-self: center;
     width: 148px;
     height: 105px;
 }
 
 .logo__image {
-    width: 100%;
-    height: 100%;
-    object-fit: contain;
+    display: block;
+    width: 148px;
+    height: 105px;
 }
 
 .nav {
-    position: absolute;
-    left: 50px;
-    top: 133px;
-    display: flex;
-    align-items: center;
-    gap: 0;
+  display: flex;
+  gap: 32px;
+  list-style: circle;
 }
 
 .nav__item {
-    font-family: 'Raleway', sans-serif;
-    font-size: 18px;
-    font-weight: 400;
-    color: #000000;
-    text-decoration: none;
     white-space: nowrap;
     padding-bottom: 2px;
 }
 
 .nav__item--underlined {
     text-decoration: underline;
-    text-underline-offset: 3px;
-    text-decoration-thickness: 1px;
-}
-
-.nav__item:first-child {
-    text-decoration: none;
-}
-
-.nav__divider {
-    color: #000000;
-    margin: 0 8px;
-    font-size: 18px;
-    font-weight: 400;
+    text-underline-offset: 5px;
 }
 
 .contacts {
-    position: absolute;
-    left: 810px;
-    top: 95px;
-    width: 240px;
-    display: flex;
-    flex-direction: column;
-    gap: 1px;
-}
-
-.contact__item {
-    background: #FFFFFF;
-    color: #000000;
-    padding: 0 5px;
-    height: 24px;
-    line-height: 24px;
-    font-size: 18px;
-    font-weight: 400;
-    text-decoration: underline;
-    text-underline-offset: 3px;
-    display: flex;
-    align-items: center;
-}
-
-.contact__address {
-    height: 49px;
-    line-height: 24px;
-    text-decoration: none;
+    justify-self: end;
+    max-width: 240px;
+    font-style: normal;
+    line-height: 1.35;
 }
 
 /* ===== COVER С ФОНОМ И ТЕКСТОМ ===== */
