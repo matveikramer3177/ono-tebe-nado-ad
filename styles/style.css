@@ -234,32 +234,38 @@
 }
 
 .lots__grid {
-    position: relative;
-    width: 100%;
-    height: 670px;
-    margin-bottom: 60px;
+  display: flex;
+  justify-content: space-between;
+  gap: 25px;
+  flex-wrap: wrap;
+  list-style-type: none;
+  padding: 0;
 }
 
 .lot {
-    position: absolute;
-    width: 334px;
-    height: 596px;
-    cursor: pointer;
+  position: relative; 
+  display: flex;
+  flex-direction: column;
+  width: 334px;
+  min-height: 563px;
 }
 
 .lot__photo {
-    width: 100%;
-    height: 100%;
-    object-fit: cover;
-    filter: brightness(0.4);
+  display: block;
+  width: 100%;
+  height: 100%;
+  object-fit: cover; 
 }
 
 .lot__text-container {
-    position: absolute;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
+  position: absolute; 
+  bottom: 0;       
+  left: 0;            
+  width: 100%;       
+  padding: 50px 40px; 
+  box-sizing: border-box;
+  z-index: 1;     
+  color: #fff; 
 }
 
 .lot__title--underlined {
