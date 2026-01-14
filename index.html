@@ -12,7 +12,9 @@
     <!-- ШАПКА -->
     <header class="header">
         <ul class="nav">
-                <a href="#" class="nav__item">главная</a>
+                <li class="nav-item_no-circle">
+                    <a href="#" class="nav__item">главная</a>
+                </li>
                 <li>
                     <a href="#" class="nav__item nav__item--underlined">посмотреть лоты</a>
                 </li>
@@ -35,13 +37,13 @@
     <main>
         <!-- COVER С ФОНОМ И ТЕКСТОМ -->
         <section class="cover">
-            <div class="cover__background">
-                <img src="images/cover.jpg" alt="Фон" class="cover__bg-image">
-            </div>
-            <div class="container">
+            <div class="overlay"></div>
+                <div class="cover__background">
+                    <img src="images/cover.jpg" alt="Фон" class="cover__bg-image">
+                </div>
                 <div class="cover__content">
                     <!-- Слово "ОНО" -->
-                    <div class="cover__word cover__word--ono">
+                    <div class="cover__word">
                         ОНО
                     </div>
                     
@@ -54,16 +56,14 @@
                     <div class="cover__word cover__word--nado">
                         НАДО
                     </div>
-                    
-                    <!-- Основной текст -->
-                    <div class="cover__text-block">
-                        <div class="cover__title">
-                            АУКЦИОН ВЕЩЕЙ, В КОТОРЫЕ НИКТО НЕ ВЕРИЛ
-                        </div>
-                        <button class="cover__button">СДЕЛАТЬ СТАВКУ</button>
-                    </div>
                 </div>
-            </div>
+                    <!-- Основной текст -->
+                <div class="cover__text-block">
+                    <div class="cover__title">
+                        АУКЦИОН ВЕЩЕЙ, В КОТОРЫЕ НИКТО НЕ ВЕРИЛ
+                    </div>
+                    <button class="cover__button">СДЕЛАТЬ СТАВКУ</button>
+                </div>
         </section>
         
         <!-- СЕКЦИЯ LOTS -->

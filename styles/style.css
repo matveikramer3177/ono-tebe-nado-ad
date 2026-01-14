@@ -1,9 +1,6 @@
-main {
-    background: #fff;
-}
-
 /* ===== HEADER ===== */
 .header {
+    width: 1100px;
     background: #FFFFFF;
     display: grid;
     grid-template-columns: 1fr min-content 1fr;
@@ -30,6 +27,10 @@ main {
   list-style: circle;
 }
 
+.nav-item_no-circle {
+    list-style: none;
+}
+
 .nav__item {
     white-space: nowrap;
     padding-bottom: 2px;
@@ -41,20 +42,24 @@ main {
 }
 
 .contacts {
-    justify-self: end;
     max-width: 240px;
-    font-style: normal;
-    line-height: 1.35;
+    justify-self: end;
+    align-self: center;
+    font-weight: 400;
+    line-height: 24.3px;
+    margin-left: -50px;
+}
+
+main {
+    background: #fff;
 }
 
 /* ===== COVER С ФОНОМ И ТЕКСТОМ ===== */
 .cover {
-    width: 1100px;
-    height: 757px;
-    margin: 0 auto;
     position: relative;
-    overflow: hidden;
+    padding: 165px 50px 50px;
 }
+
 
 .cover__background {
     position: absolute;
@@ -72,25 +77,30 @@ main {
     filter: brightness(0.4)
 }
 
+.overlay {
+    position: absolute;
+    inset: 0;
+    background-color: rgba(0, 0, 0, 0.6);
+    z-index: 1;
+}
+
 .cover__content {
     position: relative;
     z-index: 2;
-    height: 100%;
-    color: #FFFFFF;
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    color: white;
+    font-weight: bold;
+    font-size: 100px;
+    line-height: 1.15;
+    text-transform: uppercase;
 }
 
 /* Стили для слов "ОНО ТЕБЕ НАДО" */
 .cover__word {
-    position: absolute;
-    font-family: 'Raleway', sans-serif;
-    font-weight: 900;
-    color: #FFFFFF;
-    text-transform: uppercase;
-    opacity: 1;
-    border-radius: 0;
-    white-space: nowrap;
-    line-height: 115%;
-    letter-spacing: 0.3em; /* 30% от размера шрифта */
+    display: block;
+    letter-spacing: 0.3em;
 }
 
 /* Слово "ОНО" - первый макет */
@@ -105,76 +115,45 @@ main {
 
 /* Слово "ТЕБЕ" - второй макет */
 .cover__word--tebe {
-    font-size: 100px;
-    left: 550px; /* Центр: 380.5px + (339px / 2) = 511px */
-    top: 300px;
-    width: 339px;
-    height: 115px;
     text-align: center;
-    transform: translateX(-50%);
-    font-weight: 700; /* Добавляем - делаем тоньше */
+    line-height: 1;
 }
 
 /* Слово "НАДО" - третий макет */
 .cover__word--nado {
-    font-size: 100px;
-    left: 663px;
-    top: 435px;
-    width: 387px;
-    height: 115px;
-    font-weight: 700; /* Добавляем - делаем тоньше */
+    text-align: right;
+    line-height: 1;
 }
 
 /* Основной текст */
 .cover__text-block {
-    position: absolute;
-    bottom: 50px;
-    left: 0;
-    width: 100%;
-    display: flex;
-    align-items: flex-end;
-    justify-content: space-between;
-    padding: 0 50px;
+  position: relative;
+  z-index: 2;
+  display: flex;
+  justify-content: end;
+  align-items: center;
+  gap: 78px;
+  margin-top: 135px;
 }
 
 /* Текст "АУКЦИОН ВЕЩЕЙ..." - уменьшаем отступ между буквами */
 .cover__title {
-    font-family: 'Raleway', sans-serif;
-    font-size: 22px;
-    font-weight: 400;
-    text-transform: uppercase;
-    letter-spacing: 0.15em; /* УМЕНЬШЕНО С 0.3em до 0.15em (15% вместо 30%) */
-    line-height: 28px;
-    color: #FFFFFF;
-    text-align: left;
-    width: 637px;
-    height: 28px;
-    display: flex;
-    align-items: center;
-    white-space: nowrap;
-    margin: 0;
+  color: white;
+  font-size: 22px;
+  line-height: 1.27;
+  text-transform: uppercase;
+  word-spacing: 18px;
 }
 
 /* КНОПКА "СДЕЛАТЬ СТАВКУ" - ОБНОВЛЕННЫЕ СВОЙСТВА */
 .cover__button {
-    background: transparent;
-    color: #FFFFFF;
-    border: 1px solid #FFFFFF;
-    padding: 15px 40px;
-    font-size: 22px; /* ИСПРАВЛЕНО: было 18px */
-    font-family: 'Raleway', sans-serif;
-    font-weight: 500; /* ИСПРАВЛЕНО: было Medium (500) */
-    text-transform: uppercase;
-    cursor: pointer;
-    transition: all 0.3s;
-    width: 257px; /* ИСПРАВЛЕНО: точное значение из макета */
-    height: 52px; /* ИСПРАВЛЕНО: точное значение из макета */
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    margin: 0;
-    letter-spacing: 0.15 em; /* Нормальный межбуквенный интервал */
-    white-space: nowrap;
+  border: 1px solid white;
+  padding: 12px 32px;
+  color: white;
+  font-size: 22px;
+  text-transform: uppercase;
+  background: transparent;
+  cursor: pointer;
 }
 
 .cover__button:hover {
@@ -184,9 +163,7 @@ main {
 /* ===== LOTS ===== */
 .lots {
     background: #FFFFFF;
-    width: 1100px; /* Ограничиваем ширину */
-
-    margin-top: 130px;
+    margin-top: 180px;
     position: relative;
 }
 
@@ -370,7 +347,7 @@ main {
 .about__logo {
     position: absolute;
     top: 35px;
-    left: 47px;
+    left: 71px;
     width: 240px;
     height: 240px;
     background-color: #000000;
