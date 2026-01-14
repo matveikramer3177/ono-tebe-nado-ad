@@ -308,7 +308,7 @@ main {
 .about {
   display: grid;
   grid-template-columns: 1fr 2fr;
-  margin: 180px 24px;
+  padding:  155px 25px 180px;
   column-gap: 15px;
 }
 
