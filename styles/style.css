@@ -5,7 +5,7 @@
     display: grid;
     grid-template-columns: 1fr min-content 1fr;
     align-items: center;
-    padding: 92px 50px;
+    padding: 92px 50px 94px 50px;
     font-size: 18px;
 }
 
@@ -130,7 +130,7 @@ main {
   position: relative;
   z-index: 2;
   display: flex;
-  justify-content: end;
+  justify-content: start;
   align-items: center;
   gap: 78px;
   margin-top: 135px;
