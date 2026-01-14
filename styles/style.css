@@ -1,17 +1,38 @@
+/* ===== БАЗОВЫЕ СТИЛИ ===== */
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Raleway', Arial, sans-serif;
+    background: #000000; /* ЧЕРНЫЙ ФОН ПО ВСЕЙ СТРАНИЦЕ */
+    color: #000000;
+    line-height: 1.4;
+    min-width: 1100px; /* Минимальная ширина для корректного отображения */
+}
+
 .container {
+    width: 1100px;
+    margin: 0 auto;
     position: relative;
     height: 100%;
 }
 
+/* ===== HEADER ===== */
 .header {
     height: 293px;
     background: #FFFFFF;
     position: relative;
+    width: 1100px; /* Ограничиваем ширину */
+    margin: 0 auto; /* Центрируем */
 }
 
 .logo {
     position: absolute;
-    left: 476px;
+    left: 478px;
     top: 92px;
     width: 148px;
     height: 105px;
@@ -33,15 +54,13 @@
 }
 
 .nav__item {
+    font-family: 'Raleway', sans-serif;
     font-size: 18px;
     font-weight: 400;
     color: #000000;
     text-decoration: none;
     white-space: nowrap;
-    padding: 15px 20px;
-    margin: -15px 0;
-    display: inline-block;
-    cursor: pointer;
+    padding-bottom: 2px;
 }
 
 .nav__item--underlined {
@@ -74,30 +93,26 @@
 .contact__item {
     background: #FFFFFF;
     color: #000000;
-    padding: 12px 15px;
-    margin: -12px -15px;
-    min-height: 24px;
+    padding: 0 5px;
+    height: 24px;
     line-height: 24px;
     font-size: 18px;
     font-weight: 400;
+    text-decoration: underline;
+    text-underline-offset: 3px;
     display: flex;
     align-items: center;
 }
 
-.contact__item a {
-    text-decoration: underline;
-    text-underline-offset: 3px;
-    color: #000000;
-}
-
 .contact__address {
-    min-height: 49px;
+    height: 49px;
     line-height: 24px;
     text-decoration: none;
 }
 
+/* ===== COVER С ФОНОМ И ТЕКСТОМ ===== */
 .cover {
-    width: 100%;
+    width: 1100px;
     height: 757px;
     margin: 0 auto;
     position: relative;
@@ -117,7 +132,7 @@
     width: 100%;
     height: 100%;
     object-fit: cover;
-    filter: brightness(0.4);
+    filter: brightness(0.4)
 }
 
 .cover__content {
@@ -127,45 +142,53 @@
     color: #FFFFFF;
 }
 
+/* Стили для слов "ОНО ТЕБЕ НАДО" */
 .cover__word {
     position: absolute;
+    font-family: 'Raleway', sans-serif;
     font-weight: 900;
     color: #FFFFFF;
     text-transform: uppercase;
+    opacity: 1;
+    border-radius: 0;
     white-space: nowrap;
     line-height: 115%;
-    letter-spacing: 0.3em;
+    letter-spacing: 0.3em; /* 30% от размера шрифта */
 }
 
+/* Слово "ОНО" - первый макет */
 .cover__word--ono {
     font-size: 100px;
     left: 50px;
     top: 165px;
     width: 286px;
     height: 115px;
-    font-weight: 700;
+    font-weight: 700; /* Было 900, стало 700 - станет тоньше */
 }
 
+/* Слово "ТЕБЕ" - второй макет */
 .cover__word--tebe {
     font-size: 100px;
-    left: 550px;
+    left: 550px; /* Центр: 380.5px + (339px / 2) = 511px */
     top: 300px;
     width: 339px;
     height: 115px;
     text-align: center;
     transform: translateX(-50%);
-    font-weight: 700;
+    font-weight: 700; /* Добавляем - делаем тоньше */
 }
 
+/* Слово "НАДО" - третий макет */
 .cover__word--nado {
     font-size: 100px;
     left: 663px;
     top: 435px;
     width: 387px;
     height: 115px;
-    font-weight: 700;
+    font-weight: 700; /* Добавляем - делаем тоньше */
 }
 
+/* Основной текст */
 .cover__text-block {
     position: absolute;
     bottom: 50px;
@@ -177,11 +200,13 @@
     padding: 0 50px;
 }
 
+/* Текст "АУКЦИОН ВЕЩЕЙ..." - уменьшаем отступ между буквами */
 .cover__title {
+    font-family: 'Raleway', sans-serif;
     font-size: 22px;
     font-weight: 400;
     text-transform: uppercase;
-    letter-spacing: 0.15em;
+    letter-spacing: 0.15em; /* УМЕНЬШЕНО С 0.3em до 0.15em (15% вместо 30%) */
     line-height: 28px;
     color: #FFFFFF;
     text-align: left;
@@ -193,22 +218,25 @@
     margin: 0;
 }
 
+/* КНОПКА "СДЕЛАТЬ СТАВКУ" - ОБНОВЛЕННЫЕ СВОЙСТВА */
 .cover__button {
     background: transparent;
     color: #FFFFFF;
     border: 1px solid #FFFFFF;
     padding: 15px 40px;
-    font-size: 22px;
-    font-weight: 500;
+    font-size: 22px; /* ИСПРАВЛЕНО: было 18px */
+    font-family: 'Raleway', sans-serif;
+    font-weight: 500; /* ИСПРАВЛЕНО: было Medium (500) */
     text-transform: uppercase;
     cursor: pointer;
     transition: all 0.3s;
-    width: 257px;
-    height: 52px;
+    width: 257px; /* ИСПРАВЛЕНО: точное значение из макета */
+    height: 52px; /* ИСПРАВЛЕНО: точное значение из макета */
     display: flex;
     align-items: center;
     justify-content: center;
-    letter-spacing: 0.15em;
+    margin: 0;
+    letter-spacing: 0.15 em; /* Нормальный межбуквенный интервал */
     white-space: nowrap;
 }
 
@@ -216,42 +244,51 @@
     background: rgba(255, 255, 255, 0.1);
 }
 
+/* ===== LOTS ===== */
 .lots {
-    padding: 80px 0 140px;
+    padding: 80px 0 140px; /* УВЕЛИЧИВАЕМ НИЖНИЙ ОТСТУП для кнопки "показать больше" */
     background: #FFFFFF;
+    width: 1100px; /* Ограничиваем ширину */
+    margin: 0 auto; /* Центрируем */
+    position: relative;
     min-height: 800px;
 }
 
+/* Заголовок "ЛОТЫ" - ТОЧНЫЕ КООРДИНАТЫ ИЗ ФОТО: X 40 */
 .lots__title {
     font-size: 40px;
     font-weight: 700;
     color: #000000;
-    width: 121px;
-    height: 47px;
+    position: static; /* Обычный поток */
+    width: 121px; /* ТОЧНАЯ ШИРИНА ИЗ ФОТО: W 121 */
+    height: 47px; /* ТОЧНАЯ ВЫСОТА ИЗ ФОТО: H 47 */
     line-height: 1;
-    margin: 0 0 27px 40px;
+    margin: 0 0 27px 40px; /* ОТСТУП СЛЕВА 40px ИЗ ФОТО */
     text-transform: uppercase;
+    display: block;
 }
 
+/* Сетка лотов - меняем на позиционирование */
 .lots__grid {
     position: relative;
-    width: 100%;
-    height: 670px;
+    width: 1100px;
+    height: 670px; /* 596px + 74px отступа сверху */
     margin-bottom: 60px;
 }
 
+/* Общие стили для лотов - абсолютное позиционирование */
 .lot {
-   position: absolute;
+    position: absolute;
     width: 334px;
     height: 596px;
-    cursor: pointer;
 }
 
+/* ЗАТЕМНЕНИЕ КАРТИНОК В РАЗДЕЛЕ ЛОТЫ */
 .lot__photo {
     width: 100%;
     height: 100%;
     object-fit: cover;
-    filter: brightness(0.4);
+    filter: brightness(0.4); /* ЗДЕСЬ ДОБАВЛЕНО ЗАТЕМНЕНИЕ НА 60% */
 }
 
 .lot__text-container {
@@ -260,12 +297,15 @@
     left: 0;
     width: 100%;
     height: 100%;
+    pointer-events: none;
 }
 
+/* Подчеркнутые заголовки */
 .lot__title--underlined {
     text-decoration: underline;
     text-underline-offset: 5px;
     text-decoration-thickness: 2px;
+    margin: 0;
     font-weight: 700;
     color: #FFFFFF;
     position: absolute;
@@ -273,20 +313,25 @@
 }
 
 .lot__description {
+    margin: 0;
     color: #FFFFFF;
     font-weight: 400;
     position: absolute;
     text-align: left;
 }
 
+/* Первый лот (слева) - смещаем вправо, чтобы не касался черного фона */
 .lot--first {
-    left: 24px;
+    left: 24px; /* Смещаем от левого края, вместо 0 */
     top: 74px;
 }
 
+/* Текст для первого лота (слева) */
 .lot__title--first {
     font-size: 22px;
+    font-weight: 700;
     line-height: 120%;
+    letter-spacing: 0%;
     left: 40px;
     top: 48px;
     width: 254px;
@@ -295,21 +340,27 @@
 
 .lot__description--first {
     font-size: 20px;
+    font-weight: 400;
     line-height: 120%;
+    letter-spacing: 0%;
     left: 40px;
     top: 404px;
     width: 254px;
     height: 144px;
 }
 
+/* Второй лот (по центру) - равномерное распределение */
 .lot--center {
-    left: 383px;
+    left: 383px; /* 24px + 334px + 25px = 383px (равномерное распределение) */
     top: 74px;
 }
 
+/* Текст для второго лота (по центру) */
 .lot__title--center {
     font-size: 22px;
+    font-weight: 700;
     line-height: 120%;
+    letter-spacing: 0%;
     left: 40px;
     top: 48px;
     width: 254px;
@@ -318,22 +369,27 @@
 
 .lot__description--center {
     font-size: 20px;
+    font-weight: 400;
     line-height: 120%;
-    letter-spacing: 0.1em;
+    letter-spacing: 10%;
     left: 40px;
     top: 188px;
     width: 254px;
     height: 360px;
 }
 
+/* Третий лот (справа) - равномерное распределение */
 .lot--right {
-    left: 742px;
+    left: 742px; /* 383px + 334px + 25px = 742px (равномерное распределение) */
     top: 74px;
 }
 
+/* Текст для третьего лота (справа) */
 .lot__title--right {
     font-size: 22px;
+    font-weight: 700;
     line-height: 120%;
+    letter-spacing: 0%;
     left: 40px;
     top: 48px;
     width: 254px;
@@ -342,44 +398,51 @@
 
 .lot__description--right {
     font-size: 20px;
+    font-weight: 400;
     line-height: 120%;
-    letter-spacing: 0.1em;
+    letter-spacing: 10%;
     left: 40px;
     top: 284px;
     width: 254px;
     height: 264px;
 }
 
+/* Кнопка "посмотреть больше" - ИСПРАВЛЕНО: обычный поток */
 .lots__more-link {
     display: inline-block;
-    margin-left: 60px;
+    margin-left: 60px; /* Было 40px, стало 60px - подвинули вправо на 20px */
     color: #000000;
     text-decoration: none;
     font-weight: 400;
     font-size: 20px;
     border-bottom: 2px solid #000000;
-    padding: 15px 20px;
-    margin: -15px -20px 0 60px;
+    padding-bottom: 2px;
+    width: auto;
+    height: 25px;
     line-height: 25px;
     text-transform: lowercase;
-    cursor: pointer;
 }
 
 .lots__more-link:hover {
     border-bottom-color: transparent;
 }
 
+/* ===== ABOUT SECTION ===== */
 .about {
-    padding: 50px 0 50px;
+    padding: 50px 0 50px; /* УМЕНЬШАЕМ ОТСТУПЫ СВЕРХУ И СНИЗУ */
     background: #FFFFFF;
+    width: 1100px; /* Ограничиваем ширину */
+    margin: 0 auto; /* Центрируем */
+    position: relative;
     min-height: 600px;
 }
 
+/* Логотип слева */
 .about__logo {
     position: absolute;
-    left: 47px;
-    top: 0;
-    width: 240px;
+    left: 47px; /* ТОЧНОЕ ЗНАЧЕНИЕ ИЗ ФОТО */
+    top: 0; /* Оставляем 0 для выравнивания с заголовком */
+    width: 240px; /* ТОЧНОЕ ЗНАЧЕНИЕ ИЗ ФОТО: W 240 */
     height: auto;
 }
 
@@ -389,13 +452,15 @@
     object-fit: contain;
 }
 
+/* Контент справа от логотипа */
 .about__content {
     position: absolute;
     left: 367px;
-    top: 0;
+    top: 0; /* Поднимаем до верха, чтобы заголовок был на уровне логотипа */
     width: 693px;
 }
 
+/* Заголовок "ОБ АУКЦИОНЕ" - исправляем перенос и выравнивание */
 .about__title {
     font-size: 40px;
     font-weight: 700;
@@ -403,6 +468,7 @@
     position: absolute;
     left: 0;
     top: 0;
+    width: auto;
     min-width: 291px;
     height: 47px;
     line-height: 1;
@@ -411,44 +477,54 @@
     white-space: nowrap;
 }
 
+/* Первый текст */
 .about__text--first {
     font-size: 20px;
     font-weight: 400;
     line-height: 24px;
+    letter-spacing: 0%;
     color: #000000;
     position: absolute;
     left: 0;
-    top: 150px;
+    top: 150px; /* Отступ от заголовка */
     width: 688px;
     height: 120px;
     margin: 0;
 }
 
+/* Второй текст */
 .about__text--second {
     font-size: 20px;
     font-weight: 400;
     line-height: 24px;
+    letter-spacing: 0%;
     color: #000000;
     position: absolute;
     left: 0;
-    top: 294px;
+    top: 294px; /* Отступ от первого текста */
     width: 693px;
     height: 168px;
     margin: 0;
 }
 
+/* ===== FOOTER ===== */
 .footer {
     padding: 80px 0 40px;
     background: #FFFFFF;
+    width: 1100px; /* Ограничиваем ширину */
+    margin: 0 auto; /* Центрируем */
+    position: relative;
     min-height: 200px;
-    border-top: none;
+    border-top: none; /* УБИРАЕМ ЛИНИЮ */
 }
 
+/* Контакты в футере */
 .footer__contacts {
     position: absolute;
     left: 50px;
     top: 0;
     width: 264.57px;
+    height: 98px;
     display: flex;
     flex-direction: column;
     gap: 1px;
@@ -457,112 +533,101 @@
 .footer__contact-item {
     background: #FFFFFF;
     color: #000000;
-    padding: 12px 15px;
-    margin: -12px -15px;
-    min-height: 24px;
+    padding: 0 5px;
+    height: 24px;
     line-height: 24px;
     font-size: 18px;
     font-weight: 400;
+    text-decoration: underline;
+    text-underline-offset: 3px;
     display: flex;
     align-items: center;
 }
 
-.footer__contact-item a {
-    text-decoration: underline;
-    text-underline-offset: 3px;
-    color: #000000;
-}
-
 .footer__contact-address {
-    min-height: 49px;
+    height: 49px;
     line-height: 24px;
     text-decoration: none;
 }
 
+/* Навигация в футере - каждая ссылка отдельно */
 .footer__nav-center {
     position: absolute;
     top: 0;
-    left: 0;
     width: 100%;
-    height: 150px;
+    height: 64px;
 }
 
-.footer__nav-item {
+/* "главная" - координаты из первого фото: X 819.7 */
+.footer__nav-item--main {
     position: absolute;
+    left: 513.7px;
+    top: 0;
     font-size: 18px;
     font-weight: 400;
     color: #000000;
     text-decoration: none;
     white-space: nowrap;
     line-height: 22px;
-    padding: 20px 30px;
-    margin: -20px -30px;
-    display: block;
-    cursor: pointer;
+    height: 22px;
 }
 
-.footer__nav-item--main {
-    left: 514px;
-    top: 0;
-    text-decoration: none;
-}
-
+/* "посмотреть лоты" - X:468.6, Y:22, W:163.9, H:22 */
 .footer__nav-item--lots {
-    left: 467px;
+    position: absolute;
+    left: 468.6px;
     top: 22px;
     width: 163.9px;
+    height: 22px;
+    font-size: 18px;
+    font-weight: 400;
+    color: #000000;
     text-decoration: underline;
     text-underline-offset: 3px;
     text-decoration-thickness: 1px;
+    white-space: nowrap;
+    line-height: 22px;
     text-align: center;
 }
 
+/* "об аукционе" - X:490.6, Y:43, W:118.8, H:22 */
 .footer__nav-item--about {
-    left: 491px;
+    position: absolute;
+    left: 490.6px;
     top: 43px;
     width: 118.8px;
+    height: 22px;
+    font-size: 18px;
+    font-weight: 400;
+    color: #000000;
     text-decoration: underline;
     text-underline-offset: 3px;
     text-decoration-thickness: 1px;
+    white-space: nowrap;
+    line-height: 22px;
     text-align: center;
 }
 
+/* Соцсети с иконками из Figma - точное позиционирование */
 .footer__social-icons {
     position: absolute;
-    left: 810px;
+    left: 810px; /* ТОЧНАЯ ПОЗИЦИЯ ИЗ ФОТО */
     top: 0;
     display: flex;
-    gap: 48px;
+    gap: 48px; /* Расстояние между иконками 48px */
     align-items: center;
-    width: 240px;
-    height: 68px;
+    width: 240px; /* W 240 из фото */
+    height: 48px; /* H 48 из фото */
 }
 
 .footer__social-icon {
     display: block;
-    width: 68px;
-    height: 68px;
-    padding: 10px;
-    margin: -10px;
-    cursor: pointer;
+    width: 48px; /* Размер иконок */
+    height: 48px;
 }
 
 .social-icon {
     width: 100%;
     height: 100%;
     object-fit: contain;
-}
-
-.nav__item:hover,
-.contact__item:hover,
-.footer__contact-item:hover,
-.footer__nav-item:hover,
-.lots__more-link:hover,
-.footer__social-icon:hover {
-    opacity: 0.7;
-}
-
-.lot:hover .lot__photo {
-    filter: brightness(0.6);
-    transition: filter 0.3s;
 }
