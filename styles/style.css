@@ -294,13 +294,10 @@ main {
     display: inline-block;
     margin-left: 64px; 
     margin-top: 28px;
-    text-decoration: none;
-    font-weight: 400;
+    text-decoration: underline;
+    text-underline-offset: 5px;
+    text-decoration-thickness: 1px;
     font-size: 20px;
-    border-bottom: 2px solid #000000;
-    padding-bottom: 2px;
-    text-transform: lowercase;
-    
 }
 
 .lots__more-link:hover {
@@ -309,85 +306,46 @@ main {
 
 /* ===== ABOUT SECTION ===== */
 .about {
-    background: #FFFFFF;
-    margin-top: 130px;
-    position: relative;
-    min-height: 600px;
+  display: grid;
+  grid-template-columns: 1fr 2fr;
+  margin: 180px 24px;
+  column-gap: 15px;
 }
 
-/* Логотип слева */
+.about__column {
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  row-gap: 24px;
+}
+
 .about__logo {
-    position: absolute;
-    top: 35px;
-    left: 71px;
-    width: 240px;
-    height: 240px;
-    background-color: #000000;
-    border-radius: 50%;
-    display: flex;
-    align-items: center;
-    justify-content: center;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 240px;
+  height: 240px;
+  background-color: black;
+  border-radius: 50%;
 }
 
 .about__logo-image {
-    width: 148px;
-    height: 114px;
-    object-fit: contain;
+  width: 148px;
+  height: 114px;
 }
 
-/* Контент справа от логотипа */
-.about__content {
-    position: absolute;
-    top: 133px;
-    left: 383px;
-    width: 693px;
-}
-
-/* Заголовок "ОБ АУКЦИОНЕ" - исправляем перенос и выравнивание */
 .about__title {
-    font-size: 40px;
-    font-weight: 700;
-    color: #000000;
-    position: absolute;
-    left: 0;
-    top: 0;
-    width: auto;
-    min-width: 291px;
-    height: 47px;
-    line-height: 1;
-    margin: 0;
-    text-transform: uppercase;
-    white-space: nowrap;
+  align-self: start;
+  font-weight: 700;
+  font-size: 40px;
+  text-transform: uppercase;
+  margin: 100px 0 76px;
 }
 
-/* Первый текст */
-.about__text--first {
-    font-size: 20px;
-    font-weight: 400;
-    line-height: 24px;
-    letter-spacing: 0%;
-    color: #000000;
-    position: absolute;
-    left: 0;
-    top: 150px; /* Отступ от заголовка */
-    width: 688px;
-    height: 120px;
-    margin: 0;
-}
-
-/* Второй текст */
-.about__text--second {
-    font-size: 20px;
-    font-weight: 400;
-    line-height: 24px;
-    letter-spacing: 0%;
-    color: #000000;
-    position: absolute;
-    left: 0;
-    top: 294px; /* Отступ от первого текста */
-    width: 693px;
-    height: 168px;
-    margin: 0;
+.about__text {
+  font-weight: 400;
+  font-size: 20px;
+  line-height: 1.2;
 }
 
 /* ===== FOOTER ===== */
