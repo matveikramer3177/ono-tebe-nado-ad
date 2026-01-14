@@ -292,8 +292,7 @@ main {
 /* Кнопка "посмотреть больше" - ИСПРАВЛЕНО: обычный поток */
 .lots__more-link {
     display: inline-block;
-    margin-left: 64px; 
-    margin-top: 28px;
+    margin: 28px 0 0 64px;
     text-decoration: underline;
     text-underline-offset: 5px;
     text-decoration-thickness: 1px;
