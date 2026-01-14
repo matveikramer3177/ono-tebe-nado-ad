@@ -154,7 +154,7 @@ main {
 
 /* Сетка лотов - меняем на позиционирование */
 .lots__grid {
-    height: 670px;
+    height: 623px;
 }
 
 /* Общие стили для лотов - абсолютное позиционирование */
@@ -162,6 +162,7 @@ main {
     position: absolute;
     width: 334px;
     height: 596px;
+    margin-top: -2px;
 }
 
 /* ЗАТЕМНЕНИЕ КАРТИНОК В РАЗДЕЛЕ ЛОТЫ */
@@ -291,17 +292,15 @@ main {
 /* Кнопка "посмотреть больше" - ИСПРАВЛЕНО: обычный поток */
 .lots__more-link {
     display: inline-block;
-    margin-left: 60px; /* Было 40px, стало 60px - подвинули вправо на 20px */
-    color: #000000;
+    margin-left: 64px; 
+    margin-top: 28px;
     text-decoration: none;
     font-weight: 400;
     font-size: 20px;
     border-bottom: 2px solid #000000;
     padding-bottom: 2px;
-    width: auto;
-    height: 25px;
-    line-height: 25px;
     text-transform: lowercase;
+    
 }
 
 .lots__more-link:hover {
@@ -340,7 +339,7 @@ main {
 .about__content {
     position: absolute;
     top: 133px;
-    left: 359px;
+    left: 383px;
     width: 693px;
 }
 
